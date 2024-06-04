@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SecureFileSharing</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+
+
+        <header>
+            <nav>
+                <!-- <div class="navbar_1">
+                     <img class="logo" src="/css/Picsart_24-05-11_23-23-01-771.png" alt="" width="80px" height="auto">
+                </div> -->
+                <div class="navbar_2 ">
+                    <ul class="sub_nav">
+                        <li class="nav_list"><a href="#">Home</a></li>
+                        <li class="nav_list"><a href="#">Contact</a></li>
+                        <li class="nav_list"><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <h1 style="margin: 3rem;">FILE SHARING</h1>
+            <div class="use">
+                <h2>How to use</h2>
+                <ul>
+                    <li>Choose the file you want to share.</li>
+                    <li>Set the password of your choice for the secure sharing your file.</li>
+                    <li>Share the file.</li>
+                    <li>After sharing the file it will create a link.</li>
+                    <li>Share the link whome you want to share.</li>
+                </ul>
+            </div>
+
+            <form action="/upload" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column; justify-content: center;">
+                <label for="file" style="font-size: 18px;">Upload</label>
+                <input type="file" id="file" name="file" required />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" />
+                <button type="submit">Share</button>
+            </form>
+
+
+
+
+            <% if (locals.fileLink != null) { %>
+                <div class="upload_file_link"> 
+                    <h2 class="Link_text">Your file is upload:   </h2>
+                    <a class="Link" href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+                   
+                </div>
+            <%} %>
+
+
+
+
+        </main>
+
+
+        
+
+    <footer>
+        
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+</html>
