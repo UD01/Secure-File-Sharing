@@ -1,0 +1,4 @@
+-	Developed a secure file sharing web application utilizing encrypted passwords for enhanced data protection
+-	Implemented a user-friendly interface allowing users to easily upload files and create unique passwords
+-	Generated shareable links for efficient file sharing with selected recipients
+-	Incorporated a password authentication system, ensuring only authorized individuals can access the shared files
